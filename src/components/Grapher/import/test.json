@@ -1,0 +1,19 @@
+{
+      "back_color": "255,51,0",
+      "fore_color": "",
+      "f_lpos": "1",
+      "id": "CO0000000003",
+      "id_app": "",
+      "id_env": "EB0000000008",
+      "nb_prop": "12",
+      "type": "4",
+      "url_doc": "",
+      "v_comment": "sitretour_C1_C1",
+      "v_desc": "\n  Attendre Feu vert\n     Comptabilité",
+      "v_groupexec": "",
+      "xywh": "-600 50 100 40",
+      "h": 40,
+      "w": 100,
+      "x": -600,
+      "y": 50
+    }

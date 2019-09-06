@@ -1,0 +1,49 @@
+/* style for the children nodes container */
+.tree-node_children {
+  margin-left: 16px;
+}
+
+.tree-node_children-collapsed {
+  height: 0px;
+}
+
+.tree-node_arrow,
+.tree-node_noarrow {
+  cursor: pointer;
+  margin-right: 6px;
+  display: inline-block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 10px;
+  font-size: 20px;
+}
+
+.tree-node_arrow:after {
+  content: "-";
+}
+
+.tree-node_noarrow:after {
+  opacity: 0;
+  cursor: default;
+}
+
+.tree-node_arrow-collapsed::after {
+  content: "+";
+}
+
+.tree-node_node {
+  border-radius: 3px;
+  width: 90%;
+  padding: 5px 10px 5px 5px;
+  font-size: 16px !important;
+  &:hover {
+    background-color: #53585d;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  &::before {
+    margin-right: 5px;
+  }
+}

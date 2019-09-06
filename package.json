@@ -1,0 +1,41 @@
+{
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "axway-react-ui": "^4.22.0",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "codemirror": "^5.48.4",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "null-loader": "^3.0.0",
+    "react-bootstrap-typeahead": "^3.4.6",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --mode=development --config webpack.config.js --open",
+    "dev-build": "webpack -d --mode=development --config webpack.config.js",
+    "build": "webpack -p --mode=production --config webpack.config.js"
+  },
+  "dependencies": {
+    "d3": "^5.11.0",
+    "react": "^16.9.0",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.9.0",
+    "react-intl": "^2.3.0",
+    "react-select": "^3.0.4"
+  },
+  "peerDependencies": {
+    "codemirror": "^5.28.0",
+    "react-bootstrap-typeahead": "2.3.2"
+  }
+}

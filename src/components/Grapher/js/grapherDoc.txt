@@ -1,0 +1,118 @@
+GrapherCommon
+-------------
+
+constructor()
+
+loadGraph(graphId, callback): loaf the graph in memory, it's possible to load several graphs
+
+saveGraph(id, callback): save the current graph
+
+properties:
+	- allowCreate: if false, it's not possible to add object on grapher
+	- allowDelete: if false, it's not possible to delete object on grapher
+	- allowMove: if false, it's not possible to move object on grapher
+	- allowMultiSelection: if false, it's not possible to select more than one object on grapher
+
+
+
+
+Grapher
+-------
+
+constructor(common, width, height)
+
+redisplay(computeLinks, notRedisplayTotal): redisplay content of the grapher
+
+doZoom(factor): zoom on grapher
+
+doZoomTotal(): fit content of the grapher in the grapher window
+
+doPan(dx, dy): move grapher
+
+getSelectedObjectIds(): get the id list of the selected objects
+
+setSelectObjectCallback(callback): set the callback on selection done
+
+setDbClickOnObjectCallback(callback): set the callback for the double clic event
+
+isUpdated(): return true if the grapher has been updated and need to be saved
+
+setModeAddNode(id, type, ctype, callback): activate addNode mode on the grapher
+
+setModeAddText(id callback): activate addText mode on the grapher
+
+setModeAddLink(id, callback): activate addLink mode on the grapher
+
+setGrid(status): set the grid or not following the value of status
+
+isGrid(): return true if the grid is activated
+
+setObjectData(id, data): set the Automator data to the node id
+
+getObjectData(id): get Automator data of the node id
+
+moveOnNode(id): move the node id in the center of the grapher
+
+setSelectedNodes(list): select the nodes of the list 
+
+setSelectedNodeByFunction(matchFunction): execute matchFUnction on all nodes, if it returns true, select the node
+
+activateGraph(graphId, callback): make one of the loaded graph the current one
+
+reorganize(sens): reorganize the current graph, sens: 'h': horizontal, 'v': vertical 
+
+
+
+GrapherTotal
+------------
+
+constructor(common, width, height)
+
+redisplay() 
+
+
+
+keyboard shortcuts
+
+
+pgUp-pgDn: zoom
+t: total zoom
+g: grid toggle
+Delete: delete object
+u or ctrl-z: undo 
+r or ctrl-y: redo
+t: zoom total
+l: add link (link between selected node and clicked node)
+n: add node
+b: add text box
+
+arrows: pan
+on link selected:
+	- arrow up/down: change the link shape
+	- arrow left/right: for type 0 and 1: keep the same shape, but change the middle bar position
+on objects selected:
+    - arrows: move objects selection for one grid step in the arrow direction
+shift-right: reorganize all nodes horizontally on the right
+shift-bottom: reorganize all nodes vertically on bottom
+
+Specific for this grapher exemple:
+q: display 'monitoring' mode
+w: center selected nodes one by one at each 'w' press
+v: select all nodes having "_SIT_" in their text using setSelectedNodeByFunction(matchFunction) function.
+1: display 'bigGraph' graph
+2: display 'allNodes' graph 
+
+
+mouse behavior
+
+click on object: select an unique object (the only way to select an arrow)
+click out of an object: unselect all objects
+ctrl-click on object: add or remove obj from selected objects list
+drag on objet: move it
+drag on node text: move it arround the node
+simple drag: pan 
+double-clic + drag: select objet by window
+shift-clic + drag: select objet by window too
+ctrl-clic + drag out of an object: draw an area any form to select the objects which are in there
+mouse-wheel: zoom-in, zoom-out with zoom center at mouse position, if link is selected: change the link type
+

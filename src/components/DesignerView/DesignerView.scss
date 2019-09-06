@@ -1,0 +1,38 @@
+.designer-searchbar.search-bar {
+  margin-bottom: 1rem;
+  .search-bar-icon::after {
+    margin-left: 1.5rem;
+  }
+  input {
+    width: 85%;
+    margin: auto;
+    min-width: 0px;
+  }
+}
+
+.view-select {
+  width: 85% !important;
+  margin: 0 auto 1rem;
+}
+
+.tree-box-header {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  color: #989998;
+  line-height: 1.5rem;
+  pointer-events: none;
+  border-top-right-radius: 40px 45px;
+  padding: 0 20px 0 10px;
+  margin-bottom: 0;
+  font-size: 12px;
+  display: table;
+}
+
+.tree-box {
+  border: 2px solid #ccc;
+  height: 50vh;
+  overflow: auto;
+  color: #53585d;
+  padding: 0.5rem;
+  white-space: nowrap;
+}
